@@ -1,0 +1,166 @@
+/* MAIN SECTION */
+.guides-section {
+  padding: 60px 140px 120px 140px;
+  width: 100%;
+}
+
+.guides-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.guides-sub,
+.guides-sub1 {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #707070;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.guides-sub1 {
+  margin-bottom: 32px;
+}
+
+/* GRID */
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.guide-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.guide-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.guide-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 24px 24px 12px;
+}
+
+.guide-card p {
+  font-size: 14px;
+  color: #6b6b6b;
+  line-height: 1.7;
+  margin: 0 24px 24px;
+}
+
+/* ADVERTISEMENT */
+.advert-card {
+  grid-column: span 2;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.advert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 320px;
+}
+
+/* =============================== */
+/* RESPONSIVE DESIGN               */
+/* =============================== */
+
+/* TABLET — 2 COLUMNS */
+@media (max-width: 1024px) {
+  .guides-section {
+    padding: 50px 60px;
+  }
+
+  .guides-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .advert-card {
+    grid-column: span 2;
+  }
+}
+
+/* MOBILE LARGE — 1 COLUMN */
+@media (max-width: 768px) {
+  .guides-section {
+    padding: 40px 30px;
+  }
+
+  .guides-title {
+    font-size: 32px;
+  }
+
+  .guides-sub,
+  .guides-sub1 {
+    font-size: 14px;
+    max-width: 90%;
+  }
+
+  .guides-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .advert-card {
+    grid-column: span 1;
+    min-height: 250px;
+  }
+
+  .advert-img {
+    height: 250px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .guides-section {
+    padding: 30px 15px;
+  }
+
+  .guides-title {
+    font-size: 26px;
+  }
+
+  .guide-card img {
+    height: 180px !important;
+  }
+
+  .guide-card h3 {
+    font-size: 16px;
+    margin: 16px;
+  }
+
+  .guide-card p {
+    font-size: 13px;
+    margin: 0 16px 16px;
+  }
+
+  .advert-img {
+    height: 220px !important;
+  }
+}

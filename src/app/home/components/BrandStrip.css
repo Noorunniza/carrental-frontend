@@ -1,0 +1,55 @@
+/* BRAND STRIP (Desktop) */
+.brand-strip {
+  width: 100%;
+  background: #ffffff;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.brand-strip img {
+  object-fit: contain;
+  opacity: 0.3;
+}
+
+/* ===================================== */
+/* TABLET — wrap into 2 rows */
+/* ===================================== */
+@media (max-width: 900px) {
+  .brand-strip {
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 30px 0;
+  }
+}
+
+/* ===================================== */
+/* MOBILE — center, smaller logos */
+/* ===================================== */
+@media (max-width: 600px) {
+  .brand-strip {
+    flex-wrap: wrap;
+    gap: 28px;
+    padding: 25px 0;
+  }
+
+  .brand-strip img {
+    width: 70px;   /* scale logos down */
+    height: auto;
+    opacity: 0.5;
+  }
+}
+
+/* EXTRA SMALL MOBILE */
+@media (max-width: 420px) {
+  .brand-strip {
+    gap: 22px;
+  }
+
+  .brand-strip img {
+    width: 60px;
+  }
+}

@@ -1,0 +1,238 @@
+/* =========================================
+   OVERLAY
+========================================= */
+.date-picker-overlay,
+.calendar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 10px;
+}
+
+/* =========================================
+   MAIN CALENDAR MODAL BOX
+========================================= */
+.date-picker-modal,
+.calendar-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  max-width: 820px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+
+/* =========================================
+   TWO-MONTH LAYOUT
+========================================= */
+.calendars-container {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.calendar-month {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* HEADER */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.nav-btn {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+/* SELECTS */
+.month-year-selectors {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.month-select,
+.year-select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================================
+   WEEKDAYS
+========================================= */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: #7a7a7a;
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* =========================================
+   DAYS GRID
+========================================= */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* empty cells */
+.calendar-day.empty {
+  background: transparent;
+  cursor: default;
+}
+
+/* disabled days */
+.calendar-day.disabled {
+  color: #cfcfcf;
+  cursor: not-allowed;
+}
+
+/* Hover effect */
+.calendar-day:hover {
+  background: #eaf9f0 !important;
+  color: #0aa67c !important;
+  transform: scale(1.05);
+  transition: 0.15s ease;
+  font-weight: 600;
+}
+
+/* selected */
+.calendar-day.pickup,
+.calendar-day.return {
+  background: #0aa67c !important;
+  color: white !important;
+  font-weight: 700;
+}
+
+/* in-range */
+.calendar-day.in-range {
+  background: #eaf9f0 !important;
+  color: #0aa67c !important;
+}
+
+/* =========================================
+   OLD REACT-DATEPICKER STYLES (MERGED)
+========================================= */
+.react-datepicker {
+  border: none !important;
+  width: 100%;
+}
+
+.react-datepicker__header {
+  background: white;
+  border-bottom: none !important;
+}
+
+.react-datepicker__current-month {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.react-datepicker__day {
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  margin: 3px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.react-datepicker__day--selected {
+  background: #08A66D !important;
+  color: white;
+}
+
+/* =========================================
+   📱 RESPONSIVE — MOBILE SIZE FIX
+========================================= */
+@media (max-width: 680px) {
+  .date-picker-modal {
+    max-width: 360px;
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .calendars-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .calendar-month {
+    min-width: 100%;
+  }
+
+  .month-select,
+  .year-select {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+
+  .weekdays {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  .calendar-grid {
+    gap: 4px;
+  }
+
+  .calendar-day {
+    font-size: 11px !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 5px;
+  }
+
+  .calendar-day.pickup,
+  .calendar-day.return {
+    font-size: 11px;
+  }
+}
+
+/* Even smaller phones */
+@media (max-width: 380px) {
+  .date-picker-modal {
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  .calendar-day {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 10px !important;
+  }
+
+  .react-datepicker__current-month {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,174 @@
+/* MAIN BOX */
+.app-promo {
+  width: 100%;
+  max-width: 1300px;
+  background: #E7F5F0;
+  border-radius: 12px;
+  margin: 60px auto;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* LEFT PHONES */
+.phones-wrapper {
+  position: relative;
+  width: 420px;
+  height: 280px;
+}
+
+.phone {
+  position: absolute;
+  height: auto;
+}
+
+/* BACK PHONE */
+.phone1 {
+  width: 230px;
+  top: -60px;
+  left: 30px;
+  transform: rotate(-12deg);
+  z-index: 1;
+}
+
+/* FRONT PHONE */
+.phone2 {
+  width: 230px;
+  top: -75px;
+  left: 180px;
+  transform: rotate(12deg);
+  z-index: 2;
+}
+
+/* TEXT AREA */
+.promo-text {
+  flex: 1;
+  padding-left: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.promo-text p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 28px;
+  max-width: 420px;
+}
+
+.install-btn {
+  width: 220px;
+  height: 54px;
+  background: #048D5B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ============================ */
+/* 🔥 TABLET VERSION */
+/* ============================ */
+@media (max-width: 992px) {
+  .app-promo {
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .promo-text {
+    padding-left: 40px;
+  }
+
+  .phones-wrapper {
+    width: 350px;
+    height: 240px;
+  }
+
+  .phone1, .phone2 {
+    width: 180px;
+  }
+
+  .phone2 {
+    left: 130px;
+  }
+}
+
+/* ============================ */
+/* 🔥 MOBILE VERSION */
+/* ============================ */
+@media (max-width: 768px) {
+  .app-promo {
+    flex-direction: column;
+    padding: 40px 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .phones-wrapper {
+    width: 290px;
+    height: 210px;
+  }
+
+  .phone1 {
+    width: 150px;
+    top: 10px;
+    left: 25px;
+  }
+
+  .phone2 {
+    width: 150px;
+    left: 115px;
+    top: -5px;
+  }
+
+  .promo-text {
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .promo-text h2 {
+    font-size: 28px;
+  }
+
+  .promo-text p {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .install-btn {
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+  }
+}
+
+/* ============================ */
+/* 🔥 SMALL PHONES */
+/* ============================ */
+@media (max-width: 420px) {
+  .phones-wrapper {
+    width: 240px;
+    height: 180px;
+  }
+
+  .phone1,
+  .phone2 {
+    width: 120px;
+  }
+
+  .phone1 { left: 10px; }
+  .phone2 { left: 95px; }
+
+  .promo-text h2 {
+    font-size: 22px;
+  }
+}

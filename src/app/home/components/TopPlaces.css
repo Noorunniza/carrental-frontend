@@ -1,0 +1,112 @@
+/* ============================ */
+/* DESKTOP */
+/* ============================ */
+
+.top-places-section {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.tp-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.tp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 35px 20px; /* row-gap, column-gap */
+  padding: 0 80px;
+}
+
+.tp-card {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  width: 260px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.tp-card:hover {
+  transform: translateY(-4px);
+}
+
+.tp-card img {
+  width: 100%;
+  height: 260px;      /* 👈 FIXED HEIGHT (same for all images) */
+  object-fit: cover;  /* 👈 Keeps image centered and cropped nicely */
+  border-radius: 10px;
+}
+
+
+.tp-card p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+
+/* ============================ */
+/* TABLET (900px) → 3 columns */
+/* ============================ */
+@media (max-width: 900px) {
+  .tp-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 40px;
+    gap: 30px 20px;
+  }
+}
+
+/* ============================ */
+/* MOBILE (768px) → 2 columns */
+/* ============================ */
+@media (max-width: 768px) {
+  .tp-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+    gap: 25px 15px;
+  }
+
+  .tp-card {
+    width: 200px;
+  }
+
+  .tp-card p {
+    font-size: 14px;
+  }
+}
+
+/* ============================ */
+/* SMALL MOBILE (480px) → 2 tighter columns */
+/* ============================ */
+@media (max-width: 480px) {
+  .tp-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+    padding: 0 10px;
+  }
+
+  .tp-card {
+    width: 165px;
+    padding: 10px;
+  }
+
+  .tp-card p {
+    font-size: 13px;
+  }
+}
+
+/* ============================ */
+/* EXTRA SMALL (360px) */
+/* ============================ */
+@media (max-width: 360px) {
+  .tp-card {
+    width: 150px;
+  }
+}

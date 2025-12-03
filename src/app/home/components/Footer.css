@@ -1,0 +1,256 @@
+/* ================================
+   FOOTER BASE (DESKTOP)
+================================ */
+.footer {
+  background: #C4E9D7;
+  padding: 60px 120px;
+  width: 100%;
+}
+
+/* ---------- TOP SECTION ---------- */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.ft-left h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.ft-left p {
+  color: #5c5c5c;
+  font-size: 14px;
+}
+
+.ft-right {
+  display: flex;
+  gap: 14px;
+}
+
+.ft-right input {
+  width: 260px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  padding: 0 16px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #000 !important;
+}
+
+.ft-right input::placeholder {
+  color: #949494;
+}
+
+.join-btn {
+  height: 50px;
+  width: 90px;
+  border-radius: 8px;
+  border: 2px solid #0f8f62;
+  background: white;
+  color: #0f8f62;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footer-line {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  margin-bottom: 30px;
+}
+
+/* ---------- BOTTOM SECTION ---------- */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* LEFT LOGO SECTION */
+.fb-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fb-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fb-airport {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.fb-rental {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.currency-select {
+  width: 110px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 0 8px;
+  font-size: 18px;
+  font-weight: 200;
+
+  background-color: #C4E9D7;
+  border: 2px solid hwb(0 4% 96% / 0.564);
+  color: #000;
+
+  /* Remove browser default arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Add your PNG arrow */
+  background-image: url("/assets/arrowUSD.png");
+  background-repeat: no-repeat;
+
+  /* perfect position */
+  background-position: right 12px center;
+  background-size: 16px;
+
+  padding-right: 40px; /* space for arrow */
+}
+
+/* CENTER LINKS */
+.fb-links {
+  display: flex;
+  gap: 26px;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.fb-links a {
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
+}
+
+/* COPYRIGHT + SOCIAL */
+.copy-social-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: flex-end;
+}
+
+.copy-social-row p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.fb-social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* =======================================
+   RESPONSIVE: TABLET (≤ 1024px)
+======================================= */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 50px 60px;
+  }
+
+  .footer-bottom {
+    gap: 50px;
+  }
+}
+
+/* =======================================
+   RESPONSIVE: MOBILE (≤ 768px)
+   — FIX LOGO + USD LEFT
+======================================= */
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 50px 30px;
+  }
+
+  /* Top becomes column */
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .ft-right {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Bottom becomes stacked */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    margin-top: 20px;
+  }
+
+  /* ⭐ LOGO + USD LEFT ALIGN (Figma accurate) */
+  .fb-left {
+    width: 100%;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 16px;
+  }
+
+  .fb-logo {
+    justify-content: flex-start !important;
+  }
+
+  .currency-select {
+    margin-left: 0 !important;
+  }
+
+  /* Links centered */
+  .fb-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  /* Copyright + icons stacked */
+  .copy-social-row {
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+/* =======================================
+   SMALL MOBILE (≤ 480px)
+======================================= */
+@media (max-width: 480px) {
+  .ft-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .ft-right input,
+  .join-btn {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    gap: 60px;
+  }
+
+  .copy-social-row {
+    gap: 12px;
+  }
+}
