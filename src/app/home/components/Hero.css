@@ -1,6 +1,4 @@
-/* ------------------------------------------------ */
-/* MAIN WRAPPER */
-/* ------------------------------------------------ */
+
 .page {
   background: #F5F5F5;
   min-height: 100vh;
@@ -13,9 +11,6 @@
   width: 100%;
 }
 
-/* ------------------------------------------------ */
-/* LOGO */
-/* ------------------------------------------------ */
 .logo-row {
   display: flex;
   align-items: center;
@@ -47,9 +42,7 @@
   font-weight: 400;
 }
 
-/* ------------------------------------------------ */
-/* LEFT AREA */
-/* ------------------------------------------------ */
+
 .left-area {
   width: 480px;
   max-width: 100%;
@@ -61,9 +54,7 @@
   margin: 20px 0 30px;
 }
 
-/* ------------------------------------------------ */
-/* FORM CARD */
-/* ------------------------------------------------ */
+
 .form-card {
   background: #ffffff;
   border-radius: 16px;
@@ -73,9 +64,7 @@
   margin-top: 40px;
 }
 
-/* ------------------------------------------------ */
-/* INPUT */
-/* ------------------------------------------------ */
+
 .input-box {
   height: 54px;
   border: 1px solid #ddd;
@@ -92,9 +81,7 @@
   outline: none;
 }
 
-/* ------------------------------------------------ */
-/* DROPOFF */
-/* ------------------------------------------------ */
+
 .dropoff-wrapper {
   display: flex;
   gap: 12px;
@@ -118,9 +105,7 @@
   font-weight: 500;
 }
 
-/* ------------------------------------------------ */
-/* DATE ROW */
-/* ------------------------------------------------ */
+
 .date-row {
   display: flex;
   gap: 16px;
@@ -138,9 +123,7 @@
   gap: 10px;
 }
 
-/* ------------------------------------------------ */
-/* ALERT */
-/* ------------------------------------------------ */
+
 .alert-row {
   display: flex;
   align-items: center;
@@ -148,9 +131,7 @@
   margin-bottom: 18px;
 }
 
-/* ------------------------------------------------ */
-/* SEARCH BUTTON */
-/* ------------------------------------------------ */
+
 .search-btn {
   width: 100%;
   height: 56px;
@@ -162,9 +143,7 @@
   font-size: 18px;
 }
 
-/* ------------------------------------------------ */
-/* RIGHT SIDE IMAGE */
-/* ------------------------------------------------ */
+
 .right-area {
   position: relative;
   width: 540px;
@@ -187,18 +166,14 @@
   max-width: 100%;
 }
 
-/* ------------------------------------------------ */
-/* LANGUAGE BUTTON */
-/* ------------------------------------------------ */
+
 .lang-btn {
   position: absolute;
   top: 40px;
   right: 80px;
 }
 
-/* ------------------------------------------------ */
-/* ⭐ DROPDOWN (FIGMA EXACT) */
-/* ------------------------------------------------ */
+
 .suggestion-box {
   position: absolute;
   top: 60px;
@@ -229,31 +204,20 @@
   background: #F8F8F8;
 }
 
-/* Left side inside row */
+
 .left-col {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Icon container */
-/* .icon-container {
-  width: 33px;
-  height: 33px;
-  border-radius: 4px;
-  background: #EFFFF7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
-/* Force icon size */
 .icon-container img {
   width: 24px !important;
   height: 24px !important;
 }
 
-/* Texts */
+
 .txt {
   display: flex;
   flex-direction: column;
@@ -277,9 +241,7 @@
   color: #00A982;
 }
 
-/* ------------------------------------------------ */
-/* 📱 TABLET (below 900px) */
-/* ------------------------------------------------ */
+
 @media (max-width: 900px) {
   .page {
     flex-direction: column;
@@ -320,9 +282,6 @@
   }
 }
 
-/* ------------------------------------------------ */
-/* 📱 MOBILE (below 480px) */
-/* ------------------------------------------------ */
 @media (max-width: 480px) {
   .title {
     font-size: 34px;

@@ -2,14 +2,10 @@ import React from "react";
 import Image from "next/image";
 import "./BrandStrip.css";
 
-/* ------------------------------------
-   Types (optional, but good practice)
-------------------------------------- */
+
 interface BrandStripProps {}
 
-/* ------------------------------------
-   Component
-------------------------------------- */
+
 const BrandStrip: React.FC<BrandStripProps> = () => {
   return (
     <div className="brand-strip">

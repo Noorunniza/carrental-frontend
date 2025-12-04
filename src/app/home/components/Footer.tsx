@@ -2,28 +2,24 @@ import React from "react";
 import Image from "next/image";
 import "./Footer.css";
 
-/* ----------------------------
-   Type definitions (optional)
------------------------------ */
+
 interface FooterProps {}
 
-/* ----------------------------
-   Component (TSX)
------------------------------ */
+
 const Footer: React.FC<FooterProps> = () => {
   return (
     <div className="footer">
 
-      {/* ▬▬▬ TOP SUBSCRIBE BAR ▬▬▬ */}
+     
       <div className="footer-top">
 
-        {/* LEFT TEXT */}
+        
         <div className="ft-left">
           <h3>Be the first one to know when the price drops</h3>
           <p>Unsubscribe any time</p>
         </div>
 
-        {/* RIGHT EMAIL INPUT */}
+       
         <div className="ft-right">
           <input type="text" placeholder="Enter your mail" />
           <button className="join-btn">Join</button>
@@ -33,10 +29,10 @@ const Footer: React.FC<FooterProps> = () => {
 
       <hr className="footer-line" />
 
-      {/* ▬▬▬ BOTTOM SECTION ▬▬▬ */}
+     
       <div className="footer-bottom">
 
-        {/* LEFT SIDE: LOGO + CURRENCY */}
+     
         <div className="fb-left">
           <div className="fb-logo">
             <Image 
@@ -60,10 +56,10 @@ const Footer: React.FC<FooterProps> = () => {
   
         </div>
 
-        {/* RIGHT SIDE (links + copyright + icons) */}
+       
         <div className="fb-right">
 
-          {/* LINKS */}
+         
           <div className="fb-links">
             <a>Privacy policy</a>
             <a>Terms & conditions</a>
@@ -72,7 +68,6 @@ const Footer: React.FC<FooterProps> = () => {
             <a>Contact</a>
           </div>
 
-          {/* COPYRIGHT + SOCIAL (same row) */}
           <div className="copy-social-row">
             <p className="copyright">
               © Copyright 2025 – Airport rental car

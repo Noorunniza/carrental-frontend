@@ -1,6 +1,4 @@
-/* =========================================
-   OVERLAY
-========================================= */
+
 .date-picker-overlay,
 .calendar-overlay {
   position: fixed;
@@ -13,9 +11,7 @@
   padding: 10px;
 }
 
-/* =========================================
-   MAIN CALENDAR MODAL BOX
-========================================= */
+
 .date-picker-modal,
 .calendar-box {
   background: #fff;
@@ -26,9 +22,7 @@
   box-shadow: 0 10px 40px rgba(0,0,0,0.12);
 }
 
-/* =========================================
-   TWO-MONTH LAYOUT
-========================================= */
+
 .calendars-container {
   display: flex;
   gap: 22px;
@@ -40,7 +34,7 @@
   min-width: 260px;
 }
 
-/* HEADER */
+
 .calendar-header {
   display: flex;
   justify-content: space-between;
@@ -56,7 +50,7 @@
   cursor: pointer;
 }
 
-/* SELECTS */
+
 .month-year-selectors {
   display: flex;
   gap: 8px;
@@ -73,9 +67,7 @@
   cursor: pointer;
 }
 
-/* =========================================
-   WEEKDAYS
-========================================= */
+
 .weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -85,9 +77,7 @@
   text-align: center;
 }
 
-/* =========================================
-   DAYS GRID
-========================================= */
+
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -104,19 +94,18 @@
   font-size: 14px;
 }
 
-/* empty cells */
+
 .calendar-day.empty {
   background: transparent;
   cursor: default;
 }
 
-/* disabled days */
+
 .calendar-day.disabled {
   color: #cfcfcf;
   cursor: not-allowed;
 }
 
-/* Hover effect */
 .calendar-day:hover {
   background: #eaf9f0 !important;
   color: #0aa67c !important;
@@ -125,7 +114,7 @@
   font-weight: 600;
 }
 
-/* selected */
+
 .calendar-day.pickup,
 .calendar-day.return {
   background: #0aa67c !important;
@@ -133,15 +122,12 @@
   font-weight: 700;
 }
 
-/* in-range */
 .calendar-day.in-range {
   background: #eaf9f0 !important;
   color: #0aa67c !important;
 }
 
-/* =========================================
-   OLD REACT-DATEPICKER STYLES (MERGED)
-========================================= */
+
 .react-datepicker {
   border: none !important;
   width: 100%;
@@ -172,9 +158,6 @@
   color: white;
 }
 
-/* =========================================
-   📱 RESPONSIVE — MOBILE SIZE FIX
-========================================= */
 @media (max-width: 680px) {
   .date-picker-modal {
     max-width: 360px;
@@ -219,7 +202,7 @@
   }
 }
 
-/* Even smaller phones */
+
 @media (max-width: 380px) {
   .date-picker-modal {
     max-width: 300px;

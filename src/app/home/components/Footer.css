@@ -1,13 +1,11 @@
-/* ================================
-   FOOTER BASE (DESKTOP)
-================================ */
+
 .footer {
   background: #C4E9D7;
   padding: 60px 120px;
   width: 100%;
 }
 
-/* ---------- TOP SECTION ---------- */
+
 .footer-top {
   display: flex;
   justify-content: space-between;
@@ -63,14 +61,14 @@
   margin-bottom: 30px;
 }
 
-/* ---------- BOTTOM SECTION ---------- */
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-/* LEFT LOGO SECTION */
+
 .fb-left {
   display: flex;
   flex-direction: column;
@@ -105,23 +103,23 @@
   border: 2px solid hwb(0 4% 96% / 0.564);
   color: #000;
 
-  /* Remove browser default arrow */
+  
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  /* Add your PNG arrow */
+ 
   background-image: url("/assets/arrowUSD.png");
   background-repeat: no-repeat;
 
-  /* perfect position */
+
   background-position: right 12px center;
   background-size: 16px;
 
-  padding-right: 40px; /* space for arrow */
+  padding-right: 40px; 
 }
 
-/* CENTER LINKS */
+
 .fb-links {
   display: flex;
   gap: 26px;
@@ -135,7 +133,7 @@
   cursor: pointer;
 }
 
-/* COPYRIGHT + SOCIAL */
+
 .copy-social-row {
   display: flex;
   align-items: center;
@@ -154,9 +152,7 @@
   align-items: center;
 }
 
-/* =======================================
-   RESPONSIVE: TABLET (≤ 1024px)
-======================================= */
+
 @media (max-width: 1024px) {
   .footer {
     padding: 50px 60px;
@@ -167,17 +163,14 @@
   }
 }
 
-/* =======================================
-   RESPONSIVE: MOBILE (≤ 768px)
-   — FIX LOGO + USD LEFT
-======================================= */
+
 @media (max-width: 768px) {
 
   .footer {
     padding: 50px 30px;
   }
 
-  /* Top becomes column */
+ 
   .footer-top {
     flex-direction: column;
     text-align: center;
@@ -189,7 +182,7 @@
     width: 100%;
   }
 
-  /* Bottom becomes stacked */
+  
   .footer-bottom {
     flex-direction: column;
     align-items: center;
@@ -198,7 +191,7 @@
     margin-top: 20px;
   }
 
-  /* ⭐ LOGO + USD LEFT ALIGN (Figma accurate) */
+  
   .fb-left {
     width: 100%;
     align-items: flex-start !important;
@@ -214,7 +207,7 @@
     margin-left: 0 !important;
   }
 
-  /* Links centered */
+
   .fb-links {
     justify-content: center;
     flex-wrap: wrap;
@@ -223,7 +216,7 @@
     margin-bottom: 25px;
   }
 
-  /* Copyright + icons stacked */
+
   .copy-social-row {
     flex-direction: column;
     justify-content: center;
@@ -231,9 +224,7 @@
   }
 }
 
-/* =======================================
-   SMALL MOBILE (≤ 480px)
-======================================= */
+
 @media (max-width: 480px) {
   .ft-right {
     flex-direction: column;

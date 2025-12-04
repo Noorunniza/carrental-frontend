@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import "./TopPlaces.css";
 
-/* Optional: Define structure for each place card */
+
 interface Place {
   name: string;
   image: string;

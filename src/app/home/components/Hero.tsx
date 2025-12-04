@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import "./Hero.css";
 import { DatePicker } from "./DatePicker";
-import { useRouter } from "next/navigation";   // ⭐ Added router import
+import { useRouter } from "next/navigation";   
 
 interface LocationItem {
   title: string;
@@ -18,7 +18,7 @@ const API_BASE =
   "https://car-rental-backend-kc40.onrender.com";
 
 
-// --- Debounce helper ---
+
 const useDebounce = (value: string, delay = 250) => {
   const [v, setV] = useState(value);
   useEffect(() => {
@@ -30,7 +30,7 @@ const useDebounce = (value: string, delay = 250) => {
 
 const Hero: React.FC = () => {
 
-  const router = useRouter();   // ⭐ Added router
+  const router = useRouter();   
 
   const [location, setLocation] = useState("");
   const [suggestions, setSuggestions] = useState<LocationItem[]>([]);
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const boxRef = useRef<HTMLDivElement | null>(null);
 
-  // -------- LOAD SUGGESTIONS -------- //
+ 
   useEffect(() => {
     if (!deb) {
       setSuggestions([]);
@@ -75,13 +75,13 @@ const Hero: React.FC = () => {
     return () => { cancel = true; };
   }, [deb]);
 
-  // -------- SELECT LOCATION -------- //
+ 
   const selectLocation = (title: string) => {
     setLocation(title);
     setShowSuggestions(false);
   };
 
-  // -------- CLOSE DROPDOWN -------- //
+
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
     return () => window.removeEventListener("mousedown", handler);
   }, []);
 
-  // -------- KEYBOARD NAV -------- //
+  
   const handleKey = (e: React.KeyboardEvent) => {
     if (!showSuggestions) return;
 
@@ -110,14 +110,14 @@ const Hero: React.FC = () => {
     }
   };
 
-  // -------- FORMAT DATE -------- //
+  
   const formatDate = (d: Date | null) => {
     if (!d) return "";
     const m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
     return `${m[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
   };
 
-  // -------- SEARCH BUTTON -------- //
+  
   const handleSearch = () => {
     if (!location) return alert("Please enter a pickup location.");
     if (!pickupDate) return alert("Please select pickup date.");
@@ -131,10 +131,10 @@ const Hero: React.FC = () => {
   return (
     <div className="page">
 
-      {/* LEFT SIDE */}
+     
       <div className="left-area">
 
-        {/* LOGO */}
+        
         <div className="logo-row">
           <div className="car-icon-box">
             <Image src="/assets/cariconfrontpage.jpg" width={36} height={36} alt="logo" />
@@ -145,13 +145,13 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* FORM */}
+       
         <div className="form-card">
           <h1 className="title">
             Quick car hire,<br/>No delays
           </h1>
 
-          {/* LOCATION INPUT */}
+        
           <div className="input-box" style={{ position: "relative" }}>
             <Image src="/assets/location.png" width={18} height={18} alt="loc" />
             
@@ -164,7 +164,7 @@ const Hero: React.FC = () => {
               onFocus={() => location && setShowSuggestions(true)}
             />
 
-            {/* DROPDOWN */}
+       
             {showSuggestions && suggestions.length > 0 && (
               <div className="suggestion-box" ref={boxRef}>
                 {loading && <div className="loading">Loading...</div>}
@@ -201,7 +201,7 @@ const Hero: React.FC = () => {
             )}
           </div>
 
-          {/* DROP OFF */}
+        
           <div className="dropoff-wrapper">
             <div className="dropoff-line" />
             <div className="dropoff-row">
@@ -210,7 +210,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* DATE PICKER */}
+        
           <div className="date-row">
             <div className="date-item" onClick={() => setShowDatePicker(true)}>
               <Image src="/assets/pickup.png" width={20} height={20} alt="pickup" />
@@ -223,31 +223,31 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* ALERT */}
+        
           <div className="alert-row">
             <Image src="/assets/vector.png" width={16} height={16} alt="check" />
             <span>Alert me when price drops</span>
           </div>
 
-          {/* ⭐ SEARCH BUTTON (updated) */}
+          
           <button className="search-btn" onClick={handleSearch}>
             Search
           </button>
         </div>
       </div>
 
-      {/* RIGHT SIDE */}
+     
       <div className="right-area">
         <Image src="/assets/subtract.png" width={550} height={550} className="road" alt="road" />
         <Image src="/assets/phimage.png" width={520} height={620} className="phone" alt="phone" />
       </div>
 
-      {/* LANG */}
+     
       <div className="lang-btn">
         <Image src="/assets/lang.png" width={70} height={35} alt="lang" />
       </div>
 
-      {/* DATE PICKER MODAL */}
+     
       {showDatePicker && (
         <DatePicker
           onClose={() => setShowDatePicker(false)}

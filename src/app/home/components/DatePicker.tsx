@@ -63,8 +63,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({
   };
 
   const handleDateClick = (date: Date) => {
-    // If user previously switched to return mode but there is no return date yet,
-    // allow re-entering pickup mode by clicking any date (this fixes the "can't change pickup" issue).
+
     if (!selectingPickup && returnDate === null) {
       setSelectingPickup(true);
     }
@@ -74,19 +73,19 @@ export const DatePicker: React.FC<DatePickerProps> = ({
       onSelectPickup(date);
       setSelectingPickup(false);
 
-      // if return exists but is <= new pickup, clear it
+    
       if (returnDate && returnDate <= date) {
         setReturnDate(null);
       }
     } else {
-      // selecting return
+      
       if (pickupDate && date > pickupDate) {
         setReturnDate(date);
         onSelectReturn(date);
-        // close after a short delay for UX
+        
         setTimeout(() => onClose(), 220);
       } else {
-        // if user clicked a date that's not after pickup, switch back to pickup
+       
         setSelectingPickup(true);
       }
     }
@@ -96,9 +95,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({
     const { year, month, daysInMonth, startingDayOfWeek } = getMonthInfo(baseMonth);
     const cells: React.ReactNode[] = [];
 
-    // convert startingDayOfWeek from Sun=0..Sat=6 to Mon-first index (Mo Tu ... Su)
-    // If your layout expects Mon first (as your weekdays is Mo..Su), shift:
-    const shiftedStart = (startingDayOfWeek + 6) % 7; // now 0 = Mon ... 6 = Sun
+    const shiftedStart = (startingDayOfWeek + 6) % 7; 
 
     for (let i = 0; i < shiftedStart; i++) {
       cells.push(<div key={`empty-${year}-${month}-${i}`} className="calendar-day empty" />);
@@ -109,7 +106,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({
       const isPickup = isSameDate(pickupDate, dt);
       const isReturn = isSameDate(returnDate, dt);
       const inRange = isInRange(dt);
-      const disabled = !selectingPickup && pickupDate && dt <= pickupDate; // disable dates <= pickup when selecting return
+      const disabled = !selectingPickup && pickupDate && dt <= pickupDate; 
 
       cells.push(
         <div
@@ -131,7 +128,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({
     return cells;
   };
 
-  // Navigation
+ 
   const nextMonth = () => {
     setCurrentMonth((prev) => new Date(prev.getFullYear(), prev.getMonth() + 1));
   };
@@ -202,11 +199,11 @@ export const DatePicker: React.FC<DatePickerProps> = ({
                     value={secondMonth.getMonth()}
                     onChange={(e) => {
                       const newMonth = parseInt(e.target.value);
-                      // if the selected second-month index is less-or-equal currentMonth => it's next year
+                      
                       const baseYear = newMonth <= currentMonth.getMonth()
                         ? currentMonth.getFullYear() + 1
                         : currentMonth.getFullYear();
-                      // currentMonth should be one month before chosen secondMonth
+                     
                       setCurrentMonth(new Date(baseYear, newMonth - 1));
                     }}
                   >
@@ -220,7 +217,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({
                     value={secondMonth.getFullYear()}
                     onChange={(e) => {
                       const newYear = parseInt(e.target.value);
-                      // set currentMonth so that secondMonth has newYear
+                     
                       const newCurrent = new Date(newYear, secondMonth.getMonth() - 1);
                       setCurrentMonth(newCurrent);
                     }}
@@ -366,9 +363,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({
     color: #0aa67c;
   }
 
-  /* ********************************************
-   📱 MOBILE — SMALLER CALENDAR
-******************************************** */
+
 @media (max-width: 680px) {
 
   .date-picker-modal {

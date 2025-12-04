@@ -2,22 +2,18 @@ import React from "react";
 import Image from "next/image";
 import "./AppPromo.css";
 
-/* -------------------------------
-   TYPE DEFINITIONS (Optional now)
--------------------------------- */
+
 interface AppPromoProps {}
 
-/* -------------------------------
-   FUNCTIONAL COMPONENT (TSX)
--------------------------------- */
+
 const AppPromo: React.FC<AppPromoProps> = () => {
   return (
     <div className="app-promo">
       
-      {/* LEFT PHONES */}
+    
       <div className="phones-wrapper">
         
-        {/* Phone 1 */}
+       
         <Image
           src="/assets/ph1.png"
           alt="phone1"
@@ -26,7 +22,7 @@ const AppPromo: React.FC<AppPromoProps> = () => {
           className="phone phone1"
         />
 
-        {/* Phone 2 */}
+       
         <Image
           src="/assets/ph2.png"
           alt="phone2"
@@ -37,7 +33,7 @@ const AppPromo: React.FC<AppPromoProps> = () => {
 
       </div>
 
-      {/* RIGHT TEXT */}
+     
       <div className="promo-text">
         <h2>Get the app now</h2>
 

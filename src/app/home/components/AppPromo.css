@@ -1,4 +1,4 @@
-/* MAIN BOX */
+
 .app-promo {
   width: 100%;
   max-width: 1300px;
@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-/* LEFT PHONES */
+
 .phones-wrapper {
   position: relative;
   width: 420px;
@@ -24,7 +24,7 @@
   height: auto;
 }
 
-/* BACK PHONE */
+
 .phone1 {
   width: 230px;
   top: -60px;
@@ -33,7 +33,7 @@
   z-index: 1;
 }
 
-/* FRONT PHONE */
+
 .phone2 {
   width: 230px;
   top: -75px;
@@ -42,7 +42,6 @@
   z-index: 2;
 }
 
-/* TEXT AREA */
 .promo-text {
   flex: 1;
   padding-left: 140px;
@@ -75,9 +74,7 @@
   font-weight: 600;
 }
 
-/* ============================ */
-/* 🔥 TABLET VERSION */
-/* ============================ */
+
 @media (max-width: 992px) {
   .app-promo {
     padding: 40px;
@@ -102,9 +99,7 @@
   }
 }
 
-/* ============================ */
-/* 🔥 MOBILE VERSION */
-/* ============================ */
+
 @media (max-width: 768px) {
   .app-promo {
     flex-direction: column;
@@ -151,9 +146,6 @@
   }
 }
 
-/* ============================ */
-/* 🔥 SMALL PHONES */
-/* ============================ */
 @media (max-width: 420px) {
   .phones-wrapper {
     width: 240px;

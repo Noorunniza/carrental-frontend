@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import "./results.css"; // ⭐ Add this
+import "./results.css"; 
 
 interface Car {
   id: number;
@@ -68,7 +68,7 @@ export default function ResultsPage() {
   return (
     <div className="results-container">
 
-      {/* Back Button */}
+     
       <button className="back-btn" onClick={() => window.history.back()}>
         ← Modify Search
       </button>
@@ -82,7 +82,7 @@ export default function ResultsPage() {
         {ret && <>Return: <b>{new Date(ret).toDateString()}</b></>}
       </p>
 
-      {/* FILTER CARD */}
+      
       <div className="filter-box">
         <div className="filter-item">
           <label>Car Type</label>
@@ -139,7 +139,7 @@ export default function ResultsPage() {
         </button>
       </div>
 
-      {/* GRID */}
+    
       <div className="cars-grid">
         {cars.map((car) => (
           <div className="car-card" key={car.id}>
@@ -178,7 +178,7 @@ export default function ResultsPage() {
         ))}
       </div>
 
-      {/* Pagination */}
+     
       <div className="pagination">
         <button
           className="page-btn"

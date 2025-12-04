@@ -1,6 +1,4 @@
-/* ============================ */
-/* DESKTOP */
-/* ============================ */
+
 
 .top-places-section {
   width: 100%;
@@ -18,7 +16,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  gap: 35px 20px; /* row-gap, column-gap */
+  gap: 35px 20px; 
   padding: 0 80px;
 }
 
@@ -38,8 +36,8 @@
 
 .tp-card img {
   width: 100%;
-  height: 260px;      /* 👈 FIXED HEIGHT (same for all images) */
-  object-fit: cover;  /* 👈 Keeps image centered and cropped nicely */
+  height: 260px;      
+  object-fit: cover;  
   border-radius: 10px;
 }
 
@@ -52,9 +50,7 @@
 
 
 
-/* ============================ */
-/* TABLET (900px) → 3 columns */
-/* ============================ */
+
 @media (max-width: 900px) {
   .tp-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -63,9 +59,7 @@
   }
 }
 
-/* ============================ */
-/* MOBILE (768px) → 2 columns */
-/* ============================ */
+
 @media (max-width: 768px) {
   .tp-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -82,9 +76,7 @@
   }
 }
 
-/* ============================ */
-/* SMALL MOBILE (480px) → 2 tighter columns */
-/* ============================ */
+
 @media (max-width: 480px) {
   .tp-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -102,9 +94,7 @@
   }
 }
 
-/* ============================ */
-/* EXTRA SMALL (360px) */
-/* ============================ */
+
 @media (max-width: 360px) {
   .tp-card {
     width: 150px;

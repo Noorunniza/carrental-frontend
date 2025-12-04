@@ -19,7 +19,7 @@ interface Car {
 }
 
 export default function CarDetails() {
-  const { id } = useParams(); // ⭐ FIXED — correct Next.js way
+  const { id } = useParams(); 
   const router = useRouter();
 
   
@@ -32,7 +32,7 @@ const API_BASE =
   "https://car-rental-backend-kc40.onrender.com";
 
   useEffect(() => {
-    if (!id) return; // wait until id exists
+    if (!id) return; 
 
     async function fetchCar() {
       try {
@@ -55,7 +55,7 @@ const API_BASE =
 
   return (
     <div style={{ padding: "40px", maxWidth: "1100px", margin: "0 auto" }}>
-      {/* BACK BUTTON */}
+     
       <button
         onClick={() => window.history.back()}
         style={{
@@ -70,7 +70,7 @@ const API_BASE =
         ← Back to results
       </button>
 
-      {/* IMAGE */}
+     
       <div
         style={{
           width: "100%",
@@ -93,7 +93,7 @@ const API_BASE =
         />
       </div>
 
-      {/* CAR INFO */}
+     
       <h1>
         {car.make} {car.model}
       </h1>
@@ -106,7 +106,7 @@ const API_BASE =
         ₹{car.price_per_day} <span style={{ fontSize: 16 }}>/day</span>
       </h2>
 
-      {/* FEATURES */}
+     
       <div
         style={{
           marginTop: "30px",
@@ -121,7 +121,7 @@ const API_BASE =
         <Feature label="Pickup Location" value={car.location} />
       </div>
 
-      {/* BOOK BUTTON */}
+      
      <button
   onClick={() => router.push(`/book?car_id=${id}`)}
   style={{

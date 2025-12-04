@@ -22,7 +22,6 @@ export default function BookingPage() {
   const [loading, setLoading] = useState(true);
   const [confirmed, setConfirmed] = useState(false);
 
-  // Form state
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
@@ -110,7 +109,7 @@ const API_BASE =
         ← Back
       </button>
 
-      {/* CAR SUMMARY */}
+      
       <div
         style={{
           padding: 20,
@@ -134,7 +133,7 @@ const API_BASE =
         </h3>
       </div>
 
-      {/* BOOKING FORM */}
+     
       <div
         style={{
           padding: 20,

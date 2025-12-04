@@ -2,14 +2,10 @@ import React from "react";
 import Image from "next/image";
 import "./RecommendedGuides.css";
 
-/* -----------------------------
-   Optional Type Definitions
------------------------------- */
+
 interface RecommendedGuidesProps {}
 
-/* -----------------------------
-   Component (TSX)
------------------------------- */
+
 const RecommendedGuides: React.FC<RecommendedGuidesProps> = () => {
   return (
     <div className="guides-section">
@@ -28,7 +24,7 @@ const RecommendedGuides: React.FC<RecommendedGuidesProps> = () => {
 
       <div className="guides-grid">
 
-        {/* Row 1 — Four Cards */}
+ 
         <div className="guide-card">
           <Image src="/assets/guide1.png" width={280} height={158} alt="guide1" />
           <h3>Rental Company's Contact Information</h3>
@@ -65,7 +61,7 @@ const RecommendedGuides: React.FC<RecommendedGuidesProps> = () => {
           </p>
         </div>
 
-        {/* Row 2 — Two Cards */}
+      
         <div className="guide-card">
           <Image src="/assets/guide5.png" width={280} height={158} alt="guide5" />
           <h3>Inspect the Vehicle Before Departure</h3>
@@ -84,7 +80,6 @@ const RecommendedGuides: React.FC<RecommendedGuidesProps> = () => {
           </p>
         </div>
 
-        {/* Advertisement Card */}
         <div className="advert-card">
           <Image
             src="/assets/advertisment.png"

@@ -1,4 +1,4 @@
-/* MAIN SECTION */
+
 .guides-section {
   padding: 60px 140px 120px 140px;
   width: 100%;
@@ -26,7 +26,7 @@
   margin-bottom: 32px;
 }
 
-/* GRID */
+
 .guides-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -35,7 +35,7 @@
   margin: 0 auto;
 }
 
-/* CARD */
+
 .guide-card {
   background: white;
   border-radius: 16px;
@@ -55,7 +55,7 @@
   object-fit: cover;
 }
 
-/* TEXT */
+
 .guide-card h3 {
   font-size: 18px;
   font-weight: 700;
@@ -69,7 +69,7 @@
   margin: 0 24px 24px;
 }
 
-/* ADVERTISEMENT */
+
 .advert-card {
   grid-column: span 2;
   border-radius: 16px;
@@ -85,11 +85,7 @@
   min-height: 320px;
 }
 
-/* =============================== */
-/* RESPONSIVE DESIGN               */
-/* =============================== */
 
-/* TABLET — 2 COLUMNS */
 @media (max-width: 1024px) {
   .guides-section {
     padding: 50px 60px;
@@ -105,7 +101,6 @@
   }
 }
 
-/* MOBILE LARGE — 1 COLUMN */
 @media (max-width: 768px) {
   .guides-section {
     padding: 40px 30px;
@@ -136,7 +131,7 @@
   }
 }
 
-/* SMALL MOBILE */
+
 @media (max-width: 480px) {
   .guides-section {
     padding: 30px 15px;
